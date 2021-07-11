@@ -1,0 +1,213 @@
+:root {
+    background-color: aliceblue;
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    font-family:Verdana, Tahoma, sans-serif; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    background-color: white;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    height: 5rem;
+    border: 0.1rem solid rgb(8, 22, 216);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    margin: 1rem;
+}
+
+.btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(19, 0, 128, 0.5);
+    transform: translate3d(-0.1rem, -0.1rem, -0.1rem);
+    transition: transform 100ns;
+    cursor: pointer;
+}
+
+.btn[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+label{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(8, 22, 216);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+textarea {
+    margin: 1rem;
+    height: 3.5rem;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(8, 22, 216);
+    border-radius: 0.5rem;
+    resize: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#copy {
+    width: auto;
+    border: none;
+    background-color: aliceblue;
+    padding: 1rem 0;
+    height: 5rem;
+    font-size: 2rem;
+}
+
+#copy:hover {
+    transform: translate3d(-0.1rem, -0.1rem, -0.1rem);
+    transition: transform 100ns;
+    cursor: pointer;
+}
+
+/* MEETING PAGE */
+
+#local {
+    padding: 0.2rem;
+    margin: 2.5rem;
+    border-radius: 1rem;
+    max-width: 20rem;
+    max-height: auto;
+    background-color: black;
+}
+
+#remote {
+    padding: 0.2rem;
+    margin: 2.5rem;
+    border-radius: 1rem;
+    max-width: 100rem;
+    max-height: auto;
+    background-color: black;
+}
+
+.meetingBtn {
+    margin: 3rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    font-size: 4.5rem;
+    background-color: white;
+    border: 0.1rem solid rgb(8, 22, 216);
+}
+
+.meetingBtn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(19, 0, 128, 0.5);
+    cursor: pointer;
+    transform: translate3d(-0.2rem, -0.2rem, -0.2rem);
+    transition: transform 100ns;
+}
+ 
+#leave:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(19, 0, 128, 0.5);
+    cursor: pointer;
+    transform: translate3d(-0.2rem, -0.2rem, -0.2rem);
+    transition: transform 100ns;
+    background-color: red;
+}
+
+#chatbox {
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    font-family: Verdana, Tahoma, sans-serif;
+    width: fit-content;
+    align-self: stretch;
+    margin: 0;
+    margin-right: 5rem;
+}
+
+#message {
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    font-family: Verdana, Tahoma, sans-serif;
+    width: 100%;
+    /* height: 3rem; */
+}
+
+span {
+    border-radius: 0.5rem;
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(8, 22, 216);
+    border: 0.1rem solid rgba(19, 0, 128);
+    color: white;
+}
+
+#allmessages {
+    border-radius: 0.5rem;
+    height: 60%;
+    width: 100%;
+    padding: 1rem;
+    /* text-align: center; */
+    background-color: white;
+    border: 0.1rem solid rgb(8, 22, 216);
+    resize: none;
+}
+
+#sendmsg {
+    width: 100%;
+    background-color: white;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    height: 5rem;
+    border: 0.1rem solid rgb(8, 22, 216);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
+}
+
+#sendmsg:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(19, 0, 128, 0.5);
+    cursor: pointer;
+    transform: translate3d(-0.2rem, -0.2rem, -0.2rem);
+    transition: transform 100ns;
+}

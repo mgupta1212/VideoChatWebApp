@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="client.js" defer></script>
+    <title>Video Chat Web App</title>
+</head>
+
+<body>
+
+    <div class="flex-column container" id="mainContainer">
+        
+        <!-- Button to generate a unique meeting ID -->
+        <button class="btn" id="generate">Generate Meeting ID</button>
+
+        <!-- Displaying the generated Meeting Id -->
+        <div id="generated" class="flex-column hidden">
+            <h2>Meeting ID: </h2>
+
+            <div class="flex-row">
+                <textarea id="idDisplay" rows="1" cols="36" readonly></textarea>
+                <button class="" id="copy"><i class="fa fa-clone"></i></button>
+            </div>
+        </div>
+
+        <!-- TAKING THE USER'S NAME -->
+        <label>
+            Name:<br><br>
+            <input type="text" id="username" placeholder="Enter Name...">
+        </label>
+
+        <!-- TAKING IN THE MEETING ID -->
+        <label>
+            Meeting Id:<br><br>
+            <input type="text" id="enteredId" placeholder="Enter Meeting Id...">
+        </label>
+        <br><br>
+        
+        <!-- Button to join the Meeting -->
+        <button class="btn" id="join">Join Meeting</button>
+    </div>
+
+    <!-- MEETING CONTAINER -->
+    <div id="meetingContainer" class="flex-row container hidden">
+
+        <div class="flex-column container">
+            
+            <!-- VIDEO CONTAINER -->
+            <div class="flex-row">
+                <video id="local" autoplay title="You"> </video>
+                <video id="remote" autoplay title="Guest"> </video>
+            </div>
+
+            <!-- CONTROL BAR FOR MEETING -->
+            <div id="controlBar" class="flex-row">
+                <button class="meetingBtn" id="mic" title="Toggle Mic">
+                    <i class="material-icons md-36">mic_off</i>
+                </button>
+                <button class="meetingBtn" id="webcam" title="Toggle WebCam">
+                    <i class="material-icons md-36">videocam_off</i>
+                </button>
+                <button class="meetingBtn" id="leave" title="Leave">
+                    <i class="material-icons md-36">call_end</i>
+                </button>
+            </div>
+        </div>
+
+        <!-- CHAT BOX TO SEND AND RECEIVE MESSAGES -->
+        <div id="chatbox" class="flex-column container">
+            <span>ChatBox</span>
+            <textarea id="allmessages" readonly> </textarea>
+            <div id="messagebox" class="flex-column"> </div>
+            <div class="flex-column">
+                <textarea id="message" placeholder="Type message..."></textarea>
+                <button id="sendmsg">Send</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
